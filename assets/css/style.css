@@ -56,7 +56,8 @@ header {
     header .cover-overlay .header-text {
       color: #fff;
       font-size: 2em;
-      font-weight: 700; }
+      font-weight: 700;
+      text-align: center; }
   header .navbar {
     align-items: center;
     display: flex;
@@ -67,6 +68,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1; }
+    header .navbar #navbar-toggle {
+      display: none; }
     header .navbar ul.nav {
       display: flex;
       justify-content: flex-end;
@@ -139,7 +142,7 @@ header {
     .content .section-content .op-card {
       align-items: center;
       background-color: #fff;
-      border-radius: 5px;
+      border-radius: 3px;
       box-shadow: 0 0 20px #cecece;
       display: flex;
       justify-content: space-between;

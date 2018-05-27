@@ -4,6 +4,78 @@
 * Made by Ashari Muhammad Hisbulloh
 * Sunday, 27 May 2018
 * 5.07 (UTC+7)
+* This responsive breakpoints adopted from bootstrap
 */
+@media (max-width: 575.98px) {
+  header {
+    height: 100vh; }
+    header .navbar {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 20px; }
+      header .navbar .navbar-logo {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%; }
+        header .navbar .navbar-logo #navbar-toggle {
+          border: solid 1px #fff;
+          border-radius: 3px;
+          color: #fff;
+          display: block;
+          font-size: 1.2em;
+          padding: 3px 7px; }
+      header .navbar .navbar-nav ul.nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 15px 0;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease; }
+        header .navbar .navbar-nav ul.nav.hidden {
+          height: 0; }
+        header .navbar .navbar-nav ul.nav.is-visible {
+          height: auto; }
+        header .navbar .navbar-nav ul.nav li {
+          margin: 5px 0; }
+          header .navbar .navbar-nav ul.nav li a {
+            display: block; }
+
+  .content {
+    padding: 50px 0; }
+    .content .section-content .op-card {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 15px; }
+      .content .section-content .op-card .op-text {
+        margin-bottom: 20px; }
+      .content .section-content .op-card .op-button button {
+        padding: 10px 45px; }
+
+  footer .container, footer .container-sm {
+    width: 85%; } }
+@media (max-width: 767.98px) {
+  .content .container, .content .container-sm {
+    display: flex;
+    flex-direction: column; }
+  .content .section-title, .content .section-content {
+    width: 100%; }
+  .content .section-title {
+    margin-bottom: 20px; }
+
+  footer .copy {
+    text-align: center;
+    width: 100%; }
+  footer .social {
+    display: none; } }
+@media (max-width: 1199.98px) {
+  footer .container, footer .container-sm {
+    width: 95%; } }
 
 /*# sourceMappingURL=mobile.css.map */

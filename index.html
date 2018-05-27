@@ -18,10 +18,12 @@
           <a href="http://kulina.id" target="_blank">
             <img src="./assets/images/logo.svg" />
           </a>
+
+          <a id="navbar-toggle" data-target="navbar-nav"><i class="fa fa-bars"></i></a>
         </div>
 
         <nav class="navbar-nav">
-          <ul class="nav">
+          <ul class="nav" id="navbar-nav">
             <li><a href="#">About Us</a></li>
             <li class="active"><a href="#">Careers</a></li>
             <li><a href="#">Internship</a></li>
@@ -154,6 +156,16 @@
         }
       }
     });
+
+    let showNavbar = false
+    $('#navbar-toggle').on('click', function(){
+      showNavbar = !showNavbar
+      if(showNavbar){
+        $(`#${ $(this).data('target') }`).removeClass('hidden').addClass('is-visible')
+      }else{
+        $(`#${ $(this).data('target') }`).removeClass('is-visible').addClass('hidden')
+      }
+    })
   })
 </script>
 </html>

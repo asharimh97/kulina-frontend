@@ -92,6 +92,7 @@ header{
       color: $white;
       font-size: 2em;
       font-weight: 700;
+      text-align: center;
     }
   }
 
@@ -105,6 +106,10 @@ header{
     top: 0;
     width: 100%;
     z-index: 1;
+
+    #navbar-toggle{
+      display: none;
+    }
 
     ul.nav{
       display: flex;
@@ -203,7 +208,7 @@ header{
     .op-card{
       align-items: center;
       background-color: $white;
-      border-radius: 5px;
+      border-radius: 3px;
       box-shadow: 0 0 20px #cecece;
       display: flex;
       justify-content: space-between;

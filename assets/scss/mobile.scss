@@ -4,4 +4,154 @@
 * Made by Ashari Muhammad Hisbulloh
 * Sunday, 27 May 2018
 * 5.07 (UTC+7)
+* This responsive breakpoints adopted from bootstrap
 */
+
+//========= COLOR ==========//
+$white: #fff;
+$backgroundWhite: #fcfcfd;
+$orange: #fd7314;
+$red: #c3332d;
+$darkGray: #373D3F;
+$lightGray: #6F7C80;
+
+//==========================//
+
+//========= MIXINS ==========//
+@mixin transition($dur){
+  transition: all $dur*1s ease;
+  -webkit-transition: all $dur*1s ease;
+  -moz-transition: all $dur*1s ease;
+  -o-transition: all $dur*1s ease;
+}
+//=========================//
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  header{
+    height: 100vh;
+
+    .navbar{
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 20px;
+
+      .navbar-logo{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        #navbar-toggle{
+          border: solid 1px $white;
+          border-radius: 3px;
+          color: $white;
+          display: block;
+          font-size: 1.2em;
+          padding: 3px 7px;
+        }
+      }
+
+      .navbar-nav{        
+        ul.nav{
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin: 15px 0;
+          padding: 0;
+          height: 0;
+          overflow: hidden;
+          @include transition(0.3);
+
+          &.hidden{
+            height: 0;
+          }
+
+          &.is-visible{
+            height: auto;
+          }
+
+          li {
+            margin: 5px 0 ;
+
+            a{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content{
+    padding: 50px 0;
+
+    .section-content{
+      .op-card{
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 15px;
+
+        .op-text{
+          margin-bottom: 20px;
+        }
+
+        .op-button{
+          button{
+            padding: 10px 45px;
+          }
+        }
+      }
+    }
+  }
+
+  footer{
+    .container, .container-sm{
+      width: 85%;
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .content{
+    .container, .container-sm{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-title, .section-content{
+      width: 100%;
+    }
+
+    .section-title{
+      margin-bottom: 20px;
+    }
+  }
+
+  footer{
+    .copy{
+      text-align: center;
+      width: 100%;
+    }
+
+    .social{
+      display: none;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  footer{
+    .container, .container-sm{
+      width: 95%;
+    }
+  }
+}
