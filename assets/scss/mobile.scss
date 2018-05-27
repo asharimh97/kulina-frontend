@@ -144,7 +144,9 @@ $lightGray: #6F7C80;
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-
+  header{
+    height: 100vh;
+  }
 }
 
 // Large devices (desktops, less than 1200px)

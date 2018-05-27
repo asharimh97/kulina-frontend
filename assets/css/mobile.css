@@ -74,6 +74,9 @@
     width: 100%; }
   footer .social {
     display: none; } }
+@media (max-width: 991.98px) {
+  header {
+    height: 100vh; } }
 @media (max-width: 1199.98px) {
   footer .container, footer .container-sm {
     width: 95%; } }
