@@ -16,6 +16,8 @@ $white: #fff;
 $backgroundWhite: #fcfcfd;
 $orange: #fd7314;
 $red: #c3332d;
+$darkGray: #373D3F;
+$lightGray: #6F7C80;
 
 //==========================//
 
@@ -44,10 +46,15 @@ html, body{
   top: 0;
 }
 
-.container{
+.container, .container-sm{
   margin: auto;
   padding: 0 20px;
   max-width: 1440px;
+  width: 100%;
+}
+
+.container-sm{
+  max-width: 1142px;
   width: 100%;
 }
 
@@ -157,6 +164,144 @@ header{
     &:hover{
       box-shadow: 0 0 10px #ccc;
       transform: translate(-50%, -10px);
+    }
+  }
+}
+
+#wedo{
+  background-color: $white;
+}
+
+.content{
+  padding: 90px 0;
+
+  .container, .container-sm{
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .section-title{
+    width: 33.3333%;
+    h3{
+      color: $darkGray;
+      font-size: 1.9em;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .section-content{
+    width: 66.6666%;
+    p{
+      color: $lightGray;
+      font-size: 1em;
+      line-height: 1.4em;
+    }
+
+    .op-card{
+      align-items: center;
+      background-color: $white;
+      border-radius: 5px;
+      box-shadow: 0 0 20px #cecece;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px ;
+      padding: 25px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      .op-text{
+        text-align: left;
+
+        p.op-text-name, p.op-text-desc{
+          margin: 0;
+          padding: 0;
+        }
+        p.op-text-name{
+          color: $darkGray;
+          font-size: 1.1em;
+          font-weight: 700;
+        }
+        p.op-text-desc{
+          color: $lightGray;
+          font-size: .95em;
+        }
+
+      }
+
+      .op-button{
+        button{
+          background: $orange;
+          border: none;
+          border-radius: 5px;
+          color: $white;
+          font-size: .95em;
+          padding: 13px 45px;
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+footer{
+  .container,.container-sm{
+    align-items: center;
+    border-top: solid 1px $lightGray;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0 70px;
+  }
+
+  .copy, .social{
+    color: $lightGray;
+    font-size: .9em;
+  }
+
+  .copy{
+    i.fa.fa-heart{
+      color: #f9423a;
+    }
+  }
+
+  .social{
+    align-items: center;
+    display: flex;
+
+    ul.social-media{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li{
+        display: inline-block;
+        margin: 0 3px;
+        a {
+          color: $lightGray;
+          text-decoration: none;
+          @include transition(0.25);
+
+          i.fa{
+            font-size: 1.75em;
+          }
+
+          &:hover{
+            color: $orange;
+          }
+        }
+
+        &:last-child{
+          margin-right: 0px;
+        }
+      }
     }
   }
 }
